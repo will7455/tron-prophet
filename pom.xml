@@ -19,6 +19,7 @@
         <module>prophet-common</module>
         <module>prophet-job</module>
         <module>prophet-container</module>
+        <module>prophet-dao</module>
     </modules>
 
 
