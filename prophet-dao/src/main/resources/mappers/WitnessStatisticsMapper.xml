@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.prophet.dao.mappers.WitnessInfoHistoryMapper">
+    <select id="getAllStatistics" resultType="org.prophet.dao.entities.WitnessInfoHistory">
+            select * from statistics
+    </select>
+
+    <insert id="addStatistic" parameterType="org.prophet.dao.entities.WitnessInfoHistory">
+        INSERT INTO statistics VALUES (
+        #{currDate, jdbcType=DATE},
+        #{jsonData, jdbcType=VARCHAR})
+    </insert>
+</mapper>
