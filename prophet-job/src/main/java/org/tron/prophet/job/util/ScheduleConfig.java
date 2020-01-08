@@ -1,4 +1,4 @@
-package org.tron.prophet.prophetjob.util;
+package org.tron.prophet.job.util;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;

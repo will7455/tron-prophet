@@ -1,4 +1,4 @@
-package org.tron.prophet.prophetjob.bean;
+package org.tron.prophet.job.bean;
 
 import java.io.Serializable;
 import java.util.List;

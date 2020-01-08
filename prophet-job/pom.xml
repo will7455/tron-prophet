@@ -11,7 +11,7 @@
 	<groupId>org.tron.prophet</groupId>
 	<artifactId>prophet-job</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>prophet-job</name>
+	<name>job</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

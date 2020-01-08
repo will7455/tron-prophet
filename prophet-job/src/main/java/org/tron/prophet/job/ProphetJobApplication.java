@@ -1,4 +1,4 @@
-package org.tron.prophet.prophetjob;
+package org.tron.prophet.job;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package org.tron.prophet.prophetjob.job;
+package org.tron.prophet.job.job;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import org.tron.prophet.prophetjob.bean.Witness;
-import org.tron.prophet.prophetjob.bean.WitnessList;
-import org.tron.prophet.prophetjob.services.WitnessListService;
+import org.tron.prophet.job.bean.Witness;
+import org.tron.prophet.job.bean.WitnessList;
+import org.tron.prophet.job.services.WitnessListService;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package org.tron.prophet.prophetjob;
+package org.tron.prophet.job;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
