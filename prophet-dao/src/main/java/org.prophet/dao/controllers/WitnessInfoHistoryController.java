@@ -1,8 +1,8 @@
 package org.prophet.dao.controllers;
 
 import org.prophet.dao.entities.ServiceResponse;
-import org.prophet.dao.entities.WitnessStatistics;
-import org.prophet.dao.services.WitnessStatisticsService;
+import org.prophet.dao.entities.WitnessInfoHistory;
+import org.prophet.dao.services.WitnessInfoHistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +13,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value="/statistics")
-public class WitnessStatisticsController {
+public class WitnessInfoHistoryController {
   @Autowired
-  private WitnessStatisticsService witnessStatisticsService;
+  private WitnessInfoHistoryService witnessStatisticsService;
 
   @RequestMapping(value = "/getAll", method = RequestMethod.GET, produces = {"application/json;charset=UTF-8"})
-  public ServiceResponse<List<WitnessStatistics>> getAllStatistics() {
+  public ServiceResponse<List<WitnessInfoHistory>> getAllStatistics() {
     return witnessStatisticsService.getAllStatistics();
   }
 
@@ -28,7 +28,7 @@ public class WitnessStatisticsController {
    * @return
    */
   @RequestMapping(value="/add",method=RequestMethod.POST,produces = {"application/json;charset=UTF-8"}, consumes = {"application/json"})
-  public ServiceResponse<String> addStatistic(@RequestBody WitnessStatistics statistics) {
+  public ServiceResponse<String> addStatistic(@RequestBody WitnessInfoHistory statistics) {
     return witnessStatisticsService.addStatistic(statistics);
   }
 }

@@ -1,4 +1,4 @@
-package com.sakary.performance;
+package org.prophet.dao;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

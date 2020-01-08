@@ -3,7 +3,7 @@ package org.prophet.dao.entities;
 import java.io.Serializable;
 import java.sql.Date;
 
-public class WitnessStatistics implements Serializable {
+public class WitnessInfoHistory implements Serializable {
   private Date currDate;
 
   private String jsonData;

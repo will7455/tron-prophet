@@ -1,31 +1,28 @@
-package org.prophet.dao.services.impl;
+package org.prophet.dao.services;
 
-import org.prophet.dao.business.WitnessStatisticsBusiness;
+import org.prophet.dao.business.WitnessInfoHistoryBusiness;
 import org.prophet.dao.entities.ServiceResponse;
-import org.prophet.dao.entities.WitnessStatistics;
-import org.prophet.dao.services.WitnessStatisticsService;
+import org.prophet.dao.entities.WitnessInfoHistory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class WitnessStatisticsServiceImpl implements WitnessStatisticsService {
+public class WitnessInfoHistoryService {
   @Autowired
-  private WitnessStatisticsBusiness witnessStatisticsBusiness;
+  private WitnessInfoHistoryBusiness witnessStatisticsBusiness;
 
-  @Override
-  public ServiceResponse<List<WitnessStatistics>> getAllStatistics() {
-    ServiceResponse<List<WitnessStatistics>> response = new ServiceResponse<>();
-    List<WitnessStatistics> witnessStatistics = witnessStatisticsBusiness.getAllStatistics();
+  public ServiceResponse<List<WitnessInfoHistory>> getAllStatistics() {
+    ServiceResponse<List<WitnessInfoHistory>> response = new ServiceResponse<>();
+    List<WitnessInfoHistory> witnessStatistics = witnessStatisticsBusiness.getAllStatistics();
     response.setStatus(200);
     response.setMessage("ok");
     response.setData(witnessStatistics);
     return response;
   }
 
-  @Override
-  public ServiceResponse<String> addStatistic(WitnessStatistics statistics) {
+  public ServiceResponse<String> addStatistic(WitnessInfoHistory statistics) {
     ServiceResponse<String> response = new ServiceResponse<>();
     try {
       witnessStatisticsBusiness.addStatistic(statistics);
