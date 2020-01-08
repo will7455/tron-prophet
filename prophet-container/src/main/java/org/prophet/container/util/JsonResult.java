@@ -3,15 +3,15 @@ package org.prophet.container.util;
 public class JsonResult<T> {
 
   private T data;
-  private String code;
+  private int status;
   private String msg;
 
   public T getData() {
     return data;
   }
 
-  public String getCode() {
-    return code;
+  public int getStatus() {
+    return status;
   }
 
   public String getMsg() {
@@ -22,8 +22,8 @@ public class JsonResult<T> {
     this.data = data;
   }
 
-  public void setCode(String code) {
-    this.code = code;
+  public void setStatus(int status) {
+    this.status = status;
   }
 
   public void setMsg(String msg) {
@@ -31,17 +31,17 @@ public class JsonResult<T> {
   }
 
   public JsonResult() {
-    this.code = "0";
+    this.status = 0;
     this.msg = "success";
   }
 
   /**
    *
-   * @param code code number
+   * @param status code number
    * @param msg message
    */
-  public JsonResult(String code, String msg) {
-    this.code = code;
+  public JsonResult(int status, String msg) {
+    this.status = status;
     this.msg = msg;
   }
 
@@ -51,7 +51,7 @@ public class JsonResult<T> {
    */
   public JsonResult(T data) {
     this.data = data;
-    this.code = "0";
+    this.status = 0;
     this.msg = "success";
   }
 
@@ -62,7 +62,7 @@ public class JsonResult<T> {
    */
   public JsonResult(T data, String msg) {
     this.data = data;
-    this.code = "0";
+    this.status = 0;
     this.msg = msg;
   }
 }
