@@ -1,4 +1,4 @@
-package org.tron.prophet.dao.entities;
+package org.tron.prophet.dao.dao.entities;
 
 import java.io.Serializable;
 

@@ -1,13 +1,13 @@
 package org.tron.prophet.dao.mappers;
 
-import org.tron.prophet.dao.entities.WitnessInfoHistory;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.tron.prophet.dao.dao.entities.WitnessInfoHistory;
 
 import java.util.List;
 
-@Component
+@Repository
 public interface WitnessInfoHistoryMapper {
-  List<WitnessInfoHistory> getAllStatistics();
+  List<WitnessInfoHistory> getAllHistories();
 
-  void addStatistic(WitnessInfoHistory statistics);
+  void addHistory(WitnessInfoHistory history);
 }

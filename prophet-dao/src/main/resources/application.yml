@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     username: root
-    password: starjia072
-    url: jdbc:mysql://localhost:3306/sakary?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    password: Prophet_2020
+    url: jdbc:mysql://47.75.34.114:3306/prophet?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 

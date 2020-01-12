@@ -5,11 +5,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.sakary.performance.mappers"})
-public class PerformanceApplication {
+@MapperScan(basePackages = {"org.tron.prophet.dao.mappers"})
+public class DaoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PerformanceApplication.class, args);
+		SpringApplication.run(DaoApplication.class, args);
 	}
 
 }

@@ -3,11 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.tron.prophet.dao.mappers.WitnessInfoHistoryMapper">
-    <select id="getAllStatistics" resultType="org.tron.prophet.dao.entities.WitnessInfoHistory">
+    <select id="getAllHistories" resultType="org.tron.prophet.dao.dao.entities.WitnessInfoHistory">
             select * from witness_info_history
     </select>
 
-    <insert id="addStatistic" parameterType="org.tron.prophet.dao.entities.WitnessInfoHistory">
+    <insert id="addHistory" parameterType="org.tron.prophet.dao.dao.entities.WitnessInfoHistory">
         INSERT INTO witness_info_history VALUES (
         #{currDate, jdbcType=DATE},
         #{jsonData, jdbcType=VARCHAR})

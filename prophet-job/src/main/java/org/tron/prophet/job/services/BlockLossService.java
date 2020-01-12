@@ -1,11 +1,11 @@
 package org.tron.prophet.job.services;
 
-import org.tron.prophet.dao.business.WitnessInfoHistoryBusiness;
+import org.tron.prophet.dao.dao.witnessinfohistory.WitnessInfoHistoryDao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.tron.prophet.dao.entities.WitnessInfoHistory;
+import org.tron.prophet.dao.dao.entities.WitnessInfoHistory;
 import org.tron.prophet.job.bo.Witness;
 import org.tron.prophet.job.bo.WitnessList;
 
@@ -20,13 +20,13 @@ public class BlockLossService {
   private WitnessListService witnessListService;
 
   @Autowired
-  private WitnessInfoHistoryBusiness witnessInfoHistoryBusiness;
+  private WitnessInfoHistoryDao witnessInfoHistoryDao;
 
   private Logger logger = LoggerFactory.getLogger(BlockLossService.class);
 
   public boolean getBlockLossDaily() {
 
-    List<WitnessInfoHistory> witnessInfoHistoryList = witnessInfoHistoryBusiness.getAllStatistics();
+    List<WitnessInfoHistory> witnessInfoHistoryList = witnessInfoHistoryDao.getAllHistories();
     WitnessList witnessList = witnessListService.getWitnessList();
     //logger.info(witnessList.toString());
 
