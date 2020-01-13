@@ -1,4 +1,4 @@
-package org.tron.prophet.job.bo;
+package org.tron.prophet.job.business.blockloss.bo;
 
 import java.io.Serializable;
 

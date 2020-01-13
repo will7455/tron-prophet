@@ -1,4 +1,4 @@
-package org.tron.prophet.job.services;
+package org.tron.prophet.job.business.blockloss;
 
 import org.tron.prophet.dao.dao.witnessinfohistory.WitnessInfoHistoryDao;
 import org.slf4j.Logger;
@@ -6,8 +6,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tron.prophet.dao.dao.entities.WitnessInfoHistory;
-import org.tron.prophet.job.bo.Witness;
-import org.tron.prophet.job.bo.WitnessList;
+import org.tron.prophet.job.business.blockloss.bo.Witness;
+import org.tron.prophet.job.business.blockloss.bo.WitnessList;
+import org.tron.prophet.job.service.listwitness.ListWitnessService;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,7 +18,7 @@ import java.util.List;
 public class BlockLossService {
 
   @Autowired
-  private WitnessListService witnessListService;
+  private ListWitnessService listWitnessService;
 
   @Autowired
   private WitnessInfoHistoryDao witnessInfoHistoryDao;
@@ -27,7 +28,7 @@ public class BlockLossService {
   public boolean getBlockLossDaily() {
 
     List<WitnessInfoHistory> witnessInfoHistoryList = witnessInfoHistoryDao.getAllHistories();
-    WitnessList witnessList = witnessListService.getWitnessList();
+    WitnessList witnessList = listWitnessService.getWitnessList();
     //logger.info(witnessList.toString());
 
     long missCount = 0;
