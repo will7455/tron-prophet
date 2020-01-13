@@ -1,6 +1,6 @@
-package org.tron.prophet.container.util;
+package org.tron.prophet.container.bean;
 
-public class JsonResult<T> {
+public class ApiResponse<T> {
 
   private T data;
   private int status;
@@ -30,7 +30,7 @@ public class JsonResult<T> {
     this.msg = msg;
   }
 
-  public JsonResult() {
+  public ApiResponse() {
     this.status = 0;
     this.msg = "success";
   }
@@ -40,7 +40,7 @@ public class JsonResult<T> {
    * @param status code number
    * @param msg message
    */
-  public JsonResult(int status, String msg) {
+  public ApiResponse(int status, String msg) {
     this.status = status;
     this.msg = msg;
   }
@@ -49,7 +49,7 @@ public class JsonResult<T> {
    *
    * @param data response data
    */
-  public JsonResult(T data) {
+  public ApiResponse(T data) {
     this.data = data;
     this.status = 0;
     this.msg = "success";
@@ -60,7 +60,7 @@ public class JsonResult<T> {
    * @param data response data
    * @param msg message
    */
-  public JsonResult(T data, String msg) {
+  public ApiResponse(T data, String msg) {
     this.data = data;
     this.status = 0;
     this.msg = msg;

@@ -1,6 +1,6 @@
 package org.tron.prophet.container.controller;
 
-import org.tron.prophet.container.util.JsonResult;
+import org.tron.prophet.container.bean.ApiResponse;
 import org.tron.prophet.dao.dao.witnessinfohistory.WitnessInfoHistoryDao;
 import org.tron.prophet.dao.dao.entities.WitnessInfoHistory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,10 +17,10 @@ public class WitnessInfoController {
   private WitnessInfoHistoryDao witnessStatisticsBusiness;
 
   @RequestMapping("/list")
-  public JsonResult<List> getList() {
+  public ApiResponse<List> getList() {
 
     List<WitnessInfoHistory> list = witnessStatisticsBusiness.getAllHistories();
 
-    return new JsonResult<>(list);
+    return new ApiResponse<>(list);
   }
 }
